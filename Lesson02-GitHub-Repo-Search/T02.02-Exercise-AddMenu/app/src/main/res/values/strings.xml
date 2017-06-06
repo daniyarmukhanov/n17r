@@ -15,5 +15,7 @@
   -->
 <resources>
     <string name="app_name">Github Query</string>
+    <string name="search">Search</string>
+    <string name="clicked">YOU CLICKED</string>
     <!--TODO (1) Add a string resource called search with the title "Search"-->
 </resources>
