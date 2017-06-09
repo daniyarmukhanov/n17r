@@ -166,6 +166,7 @@ public class MainActivity extends AppCompatActivity implements
         return new AsyncTaskLoader<String>(this) {
 
             // TODO (1) Create a String member variable called mGithubJson that will store the raw JSON
+            String mGitHubJson;
 
             @Override
             protected void onStartLoading() {
@@ -182,7 +183,11 @@ public class MainActivity extends AppCompatActivity implements
                 mLoadingIndicator.setVisibility(View.VISIBLE);
 
                 // TODO (2) If mGithubJson is not null, deliver that result. Otherwise, force a load
-                forceLoad();
+                if (mGitHubJson != null) {
+                    deliverResult(mGitHubJson);
+                } else {
+                    forceLoad();
+                }
             }
 
             @Override
@@ -205,6 +210,12 @@ public class MainActivity extends AppCompatActivity implements
                     e.printStackTrace();
                     return null;
                 }
+            }
+
+            @Override
+            public void deliverResult(String data) {
+                mGitHubJson = data;
+                super.deliverResult(data);
             }
 
             // TODO (3) Override deliverResult and store the data in mGithubJson
