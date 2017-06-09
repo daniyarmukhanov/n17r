@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <CheckBoxPreference
         android:defaultValue="@bool/pref_show_bass_default"
@@ -22,6 +23,13 @@
         android:summaryOff="@string/pref_show_false"
         android:summaryOn="@string/pref_show_true"
         android:title="@string/pref_show_treble_label" />
+
+    <ListPreference
+        android:defaultValue="@string/pref_color_red_value"
+        android:key="list_pref_key"
+        android:entryValues="@array/values"
+        android:entries="@array/labels"
+        android:title="@string/color_title" />
 
     <!-- TODO (1) Add a list preference -->
 
