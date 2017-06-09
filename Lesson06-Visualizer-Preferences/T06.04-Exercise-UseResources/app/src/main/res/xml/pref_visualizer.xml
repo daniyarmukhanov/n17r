@@ -5,10 +5,9 @@
     <!-- TODO (3) Update these values to be values from resource files and not hard coded -->
 
     <CheckBoxPreference
-        android:defaultValue="true"
-        android:key="show_bass"
-        android:summaryOff="Hidden"
-        android:summaryOn="Shown"
-        android:title="Show Bass" />
+        android:defaultValue="@bool/show_bass_bool"
+        android:key="@string/show_bass_key"
+        android:summaryOff="@string/hidden"
+        android:summaryOn="@string/shown" />
 
 </PreferenceScreen>
