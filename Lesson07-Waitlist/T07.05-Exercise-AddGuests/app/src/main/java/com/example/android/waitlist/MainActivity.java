@@ -87,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
         } catch (NumberFormatException e) {
             e.printStackTrace();
             Log.i(TAG, "addGuest: " + e.toString());
+
         }
 
         addGuest(name, size);
