@@ -98,10 +98,11 @@ public class MainActivity extends AppCompatActivity {
         if(mData.moveToNext()){
             mDefinitionTextView.setText("");
             mTermTextView.setText(mData.getString(mData.getColumnIndex(DroidTermsExampleContract.COLUMN_WORD)));
+            mCurrentState = STATE_HIDDEN;
         }
         // Note that you shouldn't try to do this if the cursor hasn't been set yet.
         // If you reach the end of the list of words, you should start at the beginning again.
-        mCurrentState = STATE_HIDDEN;
+
 
     }
 
